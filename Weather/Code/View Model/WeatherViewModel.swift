@@ -44,7 +44,7 @@ class WeatherViewModel{
                     completion(nil)
                     return
                 }
-                
+                print(response)
                 if let jsonData = response.data {
                     if let jsonDictionary = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
                         let jsonKeysArray = Array(jsonDictionary.keys)

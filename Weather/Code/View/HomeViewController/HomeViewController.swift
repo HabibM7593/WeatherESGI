@@ -79,6 +79,7 @@ class HomeViewController: UIViewController {
     //MARK: Weather
     /* Method to launch the query with the corresponding parameters*/
     func getWeather() {
+        print(Connectivity().isConnectedToNetwork)
         if !Connectivity().isConnectedToNetwork {
             self.collectionView.reloadData()
         } else {
